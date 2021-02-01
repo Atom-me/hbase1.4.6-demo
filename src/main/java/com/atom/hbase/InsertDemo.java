@@ -17,7 +17,7 @@ import java.io.IOException;
 public class InsertDemo {
     public static void main(String[] args) throws IOException {
 
-        //创建配置对象
+        //创建配置对象,, load the hdfs-site.xml
         Configuration configuration = HBaseConfiguration.create();
         //通过连接工厂创建连接对象
         Connection connection = ConnectionFactory.createConnection(configuration);
