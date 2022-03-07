@@ -24,6 +24,8 @@ public class DeleteDataDemo {
         //创建配置对象,, load the hdfs-site.xml
         //hdfs-site.xml 里面只需要配置zk信息就可以，所有的信息都在zk里面
         Configuration configuration = HBaseConfiguration.create();
+        configuration.set("hbase.zookeeper.quorum","10.16.118.247");
+        configuration.set("hbase.zookeeper.property.clientPort","2181");
         //通过连接工厂创建连接对象
         Connection connection = ConnectionFactory.createConnection(configuration);
 

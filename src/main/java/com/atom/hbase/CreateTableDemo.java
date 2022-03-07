@@ -20,6 +20,8 @@ public class CreateTableDemo {
     public static void main(String[] args) throws IOException {
 
         Configuration configuration = HBaseConfiguration.create();
+        configuration.set("hbase.zookeeper.quorum","10.16.118.247");
+        configuration.set("hbase.zookeeper.property.clientPort","2181");
         //通过连接工厂创建连接对象
         Connection connection = ConnectionFactory.createConnection(configuration);
 
